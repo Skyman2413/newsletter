@@ -11,7 +11,7 @@ pub struct NewSubscriberForm {
 
 pub async fn subscribe(
     form: web::Form<NewSubscriberForm>,
-    pool: web::Data<PgPool>
+    pool: web::Data<PgPool>,
 ) -> HttpResponse {
     match sqlx::query!(
         r#"
